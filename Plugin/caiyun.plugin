@@ -1,0 +1,28 @@
+#!name = 彩云天气VIP
+#!desc = 插件的功能描述，不可换行。
+#!author = wf021325
+#!openUrl =
+#!homepage = https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/TaskIcons/CYTQ.png
+#!date = 2023-12-06 11:58:56
+
+
+[MITM]
+
+hostname = *.cyapi.cn
+
+[URL Rewrite]
+
+# 普通版广告
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather - reject-dict
+
+[Script]
+
+# 赏叶赏花
+http-response ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\?app_name=weather script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, timeout=60, tag=caiyun_4
+
+# 解锁vip
+http-response ^https:\/\/biz\.cyapi\.cn\/v2\/user script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, requires-body=true, timeout=60, tag=caiyun_6
+
+# 卫星云图 48小时预报
+http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js, timeout=60, tag=caiyun_8
