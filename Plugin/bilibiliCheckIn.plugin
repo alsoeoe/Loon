@@ -14,13 +14,17 @@
 # 订阅地址：https://raw.githubusercontent.com/ClydeTime/BiliBili/main/boxjs/BiliBili.boxjs.json
 # 更新时间：2023-06-02
 
+
+[MITM]
+
+hostname = app.bilibili.com, m.bilibili.com
+
 [Script]
-# BiliBili每日等级任务
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站每日等级任务
 
 http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(APP)
 
 http-request ^https?:\/\/m.bilibili.com/$ script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站Cookie(网页)
 
-[MITM]
-hostname = app.bilibili.com, m.bilibili.com
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag=B站每日等级任务
+
+

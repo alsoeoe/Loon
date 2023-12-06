@@ -7,9 +7,11 @@
 #!date = 2023-12-06 12:48:30
 
 [MITM]
+
 hostname =api.hellobike.com
 
 [Script]
+
 cron "0 9 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4e0081f7b18a2cea9dbdf13545e60885/raw/d53857028ced29aed98affb5d4a602b2a8bf94cf/hldc.js, timeout=300, tag=哈啰单车奖励金签到
 
 
