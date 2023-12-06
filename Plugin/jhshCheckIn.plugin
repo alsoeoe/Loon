@@ -1,0 +1,15 @@
+#!name = 建行生活签到
+#!desc = 连续签到领优惠券礼包
+#!author = FoKit
+#!openUrl =
+#!homepage = https://github.com/FoKit/Scripts
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/TaskIcons/JHSH.png
+#!date = 2023-12-05 18:42:35
+
+
+[Script]
+cron "0 9 * * *" script-path=hldc.js, timeout=300, tag=哈啰单车奖励金签到
+http-request ^https:\/\/api\.hellobike\.com\/api\?user\.taurus\.pointInfo script-path=hldc.js, timeout=10, tag=哈啰单车获取token
+
+[MITM]
+hostname =api.hellobike.com
