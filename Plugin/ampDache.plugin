@@ -1,0 +1,18 @@
+#!name = 高德打车签到
+#!desc = 自动签到 地图APP/微信小程序、支付宝小程序
+#!author = wf021325
+#!openUrl = 
+#!homepage = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/TaskIcons/GDDT.png
+#!date = 2023-12-06 10:15:11
+
+
+[MITM]
+
+hostname = *.amap.com
+
+[Script]
+
+http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=高德地图打车Cookie
+
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=60, tag=高德地图打车签到
