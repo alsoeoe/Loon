@@ -13,6 +13,6 @@ hostname = api.revenuecat.com
 [Script]
 
 
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, timeout=60, tag=revenuecat
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, timeout=60, img-url=https://raw.githubusercontent.com/alsoeoe/Aicon/main/Icons/RevenueCat.png, tag=revenuecat
 
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-header.js, timeout=30, tag=replaceHeader, argument=(\r\n)X-RevenueCat-ETag:.+(\r\n)->$1X-RevenueCat-ETag:$2
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-header.js, timeout=30, img-url=https://raw.githubusercontent.com/alsoeoe/Aicon/main/Icons/RevenueCat.png, tag=replaceHeader, argument=(\r\n)X-RevenueCat-ETag:.+(\r\n)->$1X-RevenueCat-ETag:$2
