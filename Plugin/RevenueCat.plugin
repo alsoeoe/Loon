@@ -13,63 +13,7 @@ hostname = api.revenuecat.com
 
 [Script]
 
-http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Plugin/RevenueCat.plugin, requires-body=true, timeout=10, tag=Response
-http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Plugin/RevenueCat.plugin, requires-body=true, timeout=10, tag=Request
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/RevenueCat.js, requires-body=true, timeout=10, tag=Response
+http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/RevenueCat.js, requires-body=true, timeout=10, tag=Request
 
-
-
-
-const modifiedResponse = {};
-const responseBody = JSON.parse($response ? $response.body : null);
-
-if (!$response) {
-  // 处理请求
-  delete $request.headers["x-revenuecat-etag"];
-  delete $request.headers["X-RevenueCat-ETag"];
-  modifiedResponse.headers = $request.headers;
-} else if (responseBody && responseBody.subscriber) {
-  // 处理响应
-  const UA = $request.headers["user-agent"];
-  const UAMappings = {
-    "%E8%B0%9C%E5%BA%95%E6%97%B6%E9%92%9F": {
-      name: "Entitlement.Pro",
-      id: "tech.miidii.MDClock.subscription.year.v1",
-    },
-    StreStress: { name: "StressWatch Pro", id: "stress_membership_yearly" },
-    Spark: { name: "premium", id: "spark_5999_1y_1w0" },
-    MoneyThings: {
-      name: "Premium",
-      id: "com.lishaohui.cashflow.lifetime",
-    },
-    Decision: {
-      name: "com.nixwang.decision.entitlements.pro",
-      id: "com.nixwang.decision.pro",
-    },
-    ScannerPro: {
-      name: "plus",
-      id: "com.premium.yearly",
-    },
-  };
-  const subscriptionData = {
-    expires_date: "8888-08-08T08:08:08Z",
-    original_purchase_date: "2023-08-08T08:08:08Z",
-    purchase_date: "2023-08-08T08:08:08Z",
-    ownership_type: "PURCHASED",
-    store: "app_store",
-  };
-
-  for (const appName in UAMappings) {
-    if (new RegExp(`^${appName}`, "i").test(UA)) {
-      const { name, id } = UAMappings[appName];
-      responseBody.subscriber.subscriptions = { [id]: subscriptionData };
-      responseBody.subscriber.entitlements = {
-        [name]: { ...subscriptionData, product_identifier: id },
-      };
-      break;
-    }
-  }
-  modifiedResponse.body = JSON.stringify(responseBody);
-}
-
-$done(modifiedResponse);
 
