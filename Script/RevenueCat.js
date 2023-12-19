@@ -1,7 +1,7 @@
 const modifiedResponse = {};
 const responseBody = {
   non_subscriptions: {},
-  request_date_ms: 1662599120248,
+  request_date_ms: 1643767322000,
   request_date: "2022-02-02T02:02:02Z",
   other_purchases: {},
   subscriber: {
@@ -10,8 +10,8 @@ const responseBody = {
     original_application_version: "8",
     management_url: "https://apps.apple.com/account/subscriptions",
     subscriptions: {},
+    entitlements: {},
   },
-  entitlements: {},
   original_purchase_date: "2022-02-02T02:02:02Z",
   original_app_user_id: "also",
 };
@@ -54,7 +54,7 @@ if (!$response) {
 
   for (const appName in UAMappings) {
     if (new RegExp(`^${appName}`, "i").test(UA)) {
-      console.log("找到匹配: ", appName);
+      console.log("找到匹配: ");
       const { name, id } = UAMappings[appName];
       responseBody.subscriber.subscriptions = { [id]: subscriptionData };
       responseBody.subscriber.entitlements = {
