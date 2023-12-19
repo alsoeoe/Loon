@@ -10,12 +10,10 @@ const responseBody = {
     original_application_version: "8",
     management_url: "https://apps.apple.com/account/subscriptions",
     subscriptions: {},
-    original_purchase_date: "2022-02-02T02:02:02Z",
-    original_app_user_id: "also",
   },
   entitlements: {},
-  original_purchase_date: "2013-08-01T07:00:00Z",
-  original_app_user_id: "Passer_by_yun",
+  original_purchase_date: "2022-02-02T02:02:02Z",
+  original_app_user_id: "also",
 };
 if (!$response) {
   // 处理请求
@@ -32,7 +30,7 @@ if (!$response) {
     },
     Stress: { name: "StressWatch Pro", id: "stress_membership_yearly" },
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
-    "Spark%20Desktop": { name: "premium", id: "spark_5999_1y_1w0" },
+    "Spark Desktop": { name: "premium", id: "spark_5999_1y_1w0" },
     MoneyThings: {
       name: "Premium",
       id: "com.lishaohui.cashflow.lifetime",
