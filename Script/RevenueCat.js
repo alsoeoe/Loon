@@ -1,20 +1,6 @@
 const modifiedResponse = {};
-const responseBody = {
-  non_subscriptions: {},
-  request_date_ms: 1643767322000,
-  request_date: "2022-02-02T02:02:02Z",
-  other_purchases: {},
-  subscriber: {
-    first_seen: "2022-02-02T02:02:02Z",
-    last_seen: "2022-02-02T02:02:02Z",
-    original_application_version: "8",
-    management_url: "https://apps.apple.com/account/subscriptions",
-    subscriptions: {},
-    entitlements: {},
-  },
-  original_purchase_date: "2022-02-02T02:02:02Z",
-  original_app_user_id: "also",
-};
+const responseBody = JSON.parse($response ? $response.body : null);
+
 if (!$response) {
   // 处理请求
   delete $request.headers["x-revenuecat-etag"];
@@ -46,15 +32,15 @@ if (!$response) {
   };
   const subscriptionData = {
     expires_date: "8888-08-08T08:08:08Z",
-    original_purchase_date: "2022-02-02T02:02:02Z",
-    purchase_date: "2022-02-02T02:02:02Z",
+    original_purchase_date: "2023-08-08T08:08:08Z",
+    purchase_date: "2023-08-08T08:08:08Z",
     ownership_type: "PURCHASED",
     store: "app_store",
   };
 
   for (const appName in UAMappings) {
     if (new RegExp(`^${appName}`, "i").test(UA)) {
-      console.log("找到匹配: ");
+      console.log("找到匹配: ", appName);
       const { name, id } = UAMappings[appName];
       responseBody.subscriber.subscriptions = { [id]: subscriptionData };
       responseBody.subscriber.entitlements = {
