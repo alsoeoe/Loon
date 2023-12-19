@@ -41,7 +41,9 @@ if (!$response) {
   for (const appName in UAMappings) {
     if (new RegExp(`^${appName}`, "i").test(UA)) {
       const { name, id } = UAMappings[appName];
-      responseBody.subscriber.subscriptions = { [id]: subscriptionData };
+      (responseBody.subscriber.management_url =
+        "https://apps.apple.com/account/subscriptions"),
+        (responseBody.subscriber.subscriptions = { [id]: subscriptionData });
       responseBody.subscriber.entitlements = {
         [name]: { ...subscriptionData, product_identifier: id },
       };
