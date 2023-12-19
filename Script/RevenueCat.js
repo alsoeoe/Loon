@@ -1,5 +1,22 @@
 const modifiedResponse = {};
-
+const responseBody = {
+  non_subscriptions: {},
+  request_date_ms: 1662599120248,
+  request_date: "2022-02-02T02:02:02Z",
+  other_purchases: {},
+  subscriber: {
+    first_seen: "2022-02-02T02:02:02Z",
+    last_seen: "2022-02-02T02:02:02Z",
+    original_application_version: "8",
+    management_url: "https://apps.apple.com/account/subscriptions",
+    subscriptions: {},
+    original_purchase_date: "2022-02-02T02:02:02Z",
+    original_app_user_id: "also",
+  },
+  entitlements: {},
+  original_purchase_date: "2013-08-01T07:00:00Z",
+  original_app_user_id: "Passer_by_yun",
+};
 if (!$response) {
   // 处理请求
   delete $request.headers["x-revenuecat-etag"];
@@ -29,25 +46,6 @@ if (!$response) {
       id: "com.premium.yearly",
     },
   };
-  const responseBody = {
-    non_subscriptions: {},
-    request_date_ms: 1662599120248,
-    request_date: "2022-02-02T02:02:02Z",
-    other_purchases: {},
-    subscriber: {
-      first_seen: "2022-02-02T02:02:02Z",
-      last_seen: "2022-02-02T02:02:02Z",
-      original_application_version: "8",
-      management_url: "https://apps.apple.com/account/subscriptions",
-      subscriptions: {},
-      original_purchase_date: "2022-02-02T02:02:02Z",
-      original_app_user_id: "also",
-    },
-    entitlements: {},
-    original_purchase_date: "2013-08-01T07:00:00Z",
-    original_app_user_id: "Passer_by_yun",
-  };
-
   const subscriptionData = {
     expires_date: "8888-08-08T08:08:08Z",
     original_purchase_date: "2022-02-02T02:02:02Z",
