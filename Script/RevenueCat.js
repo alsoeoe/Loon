@@ -37,10 +37,11 @@ if (!$response) {
     ownership_type: "PURCHASED",
     store: "app_store",
   };
-  console.log("当前 User-Agent: ", UA);
   for (const appName in UAMappings) {
-    if (new RegExp(`^${appName}`, "i").test(UA)) {
-      console.log("找到匹配: ", appName);
+    const regex = new RegExp(`^(spark|${appName})`, "i");
+
+    if (regex.test(UA)) {
+      console.log("找到匹配");
       const { name, id } = UAMappings[appName];
       responseBody.subscriber.subscriptions = { [id]: subscriptionData };
       responseBody.subscriber.entitlements = {
