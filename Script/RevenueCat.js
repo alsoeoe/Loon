@@ -1,5 +1,22 @@
 const modifiedResponse = {};
-const responseBody = JSON.parse($response ? $response.body : null);
+const responseBody = {
+  non_subscriptions: {},
+  request_date_ms: 1662599120248,
+  request_date: "2022-09-08T01:05:20Z",
+  other_purchases: {},
+  subscriber: {
+    first_seen: "2022-09-08T01:04:03Z",
+    last_seen: "2022-09-08T01:04:03Z",
+    original_application_version: "8",
+    management_url: "https://apps.apple.com/account/subscriptions",
+    subscriptions: {},
+    original_purchase_date: "2022-09-07T13:05:43Z",
+    original_app_user_id: "$RCAnonymousID:ddgksf2013",
+  },
+  entitlements: {},
+  original_purchase_date: "2013-08-01T07:00:00Z",
+  original_app_user_id: "Passer_by_yun",
+};
 
 if (!$response) {
   // 处理请求
@@ -41,18 +58,6 @@ if (!$response) {
   for (const appName in UAMappings) {
     if (new RegExp(`^${appName}`, "i").test(UA)) {
       const { name, id } = UAMappings[appName];
-      responseBody.subscriber = {
-        non_subscriptions: {},
-        first_seen: "2022-08-08T08:08:08Z",
-        original_application_version: "8",
-        other_purchases: {},
-        management_url: "https://apps.apple.com/account/subscriptions",
-        subscriptions: {},
-        entitlements: {},
-        original_purchase_date: "2022-06-06T06:06:06Z",
-        original_app_user_id: "also",
-        last_seen: "2022-08-08T08:08:08Z",
-      };
       responseBody.subscriber.subscriptions = { [id]: subscriptionData };
       responseBody.subscriber.entitlements = {
         [name]: { ...subscriptionData, product_identifier: id },
