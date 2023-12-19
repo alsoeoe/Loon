@@ -14,7 +14,7 @@ if (!$response) {
       name: "Entitlement.Pro",
       id: "tech.miidii.MDClock.subscription.year.v1",
     },
-    StreStress: { name: "StressWatch Pro", id: "stress_membership_yearly" },
+    Stress: { name: "StressWatch Pro", id: "stress_membership_yearly" },
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
     MoneyThings: {
       name: "Premium",
