@@ -27,7 +27,7 @@ if (!$response) {
       name: "plus",
       id: "com.premium.yearly",
     },
-    Spark: { name: "premium", id: "spark_5999_1y_1w0" },
+    // Spark: { name: "premium", id: "spark_5999_1y_1w0" },
   };
   const subscriptionData = {
     expires_date: "8888-08-08T08:08:08Z",
