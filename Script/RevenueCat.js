@@ -16,6 +16,7 @@ if (!$response) {
     },
     Stress: { name: "StressWatch Pro", id: "stress_membership_yearly" },
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
+    "Spark%20Desktop": { name: "premium", id: "spark_5999_1y_1w0" },
     MoneyThings: {
       name: "Premium",
       id: "com.lishaohui.cashflow.lifetime",
