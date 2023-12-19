@@ -16,7 +16,6 @@ if (!$response) {
     },
     Stress: { name: "StressWatch Pro", id: "stress_membership_yearly" },
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
-    "Spark Desktop": { name: "premium", id: "spark_5999_1y_1w0" },
     MoneyThings: {
       name: "Premium",
       id: "com.lishaohui.cashflow.lifetime",
@@ -38,9 +37,7 @@ if (!$response) {
     store: "app_store",
   };
   for (const appName in UAMappings) {
-    const regex = new RegExp(`^(spark|${appName})`, "i");
-
-    if (regex.test(UA)) {
+    if (new RegExp(`^${appName}`, "i").test(UA)) {
       console.log("找到匹配");
       const { name, id } = UAMappings[appName];
       responseBody.subscriber.subscriptions = { [id]: subscriptionData };
