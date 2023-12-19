@@ -52,7 +52,8 @@ if (!$response) {
         original_purchase_date: "2022-06-06T06:06:06Z",
         original_app_user_id: "also",
         last_seen: "2022-08-08T08:08:08Z",
-      }((responseBody.subscriber.subscriptions = { [id]: subscriptionData }));
+      };
+      responseBody.subscriber.subscriptions = { [id]: subscriptionData };
       responseBody.subscriber.entitlements = {
         [name]: { ...subscriptionData, product_identifier: id },
       };
