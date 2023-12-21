@@ -35,7 +35,7 @@ function processResponse(response, request) {
       ownership_type: "PURCHASED",
       billing_issues_detected_at: null,
       period_type: "normal",
-      expires_date: "2099-12-18T08:08:06Z",
+      expires_date: "2099-09-09T08:08:06Z",
       grace_period_expires_date: null,
       unsubscribe_detected_at: null,
       original_purchase_date: "2022-02-08T08:08:08Z",
@@ -45,7 +45,7 @@ function processResponse(response, request) {
     const entitlementData = {
       grace_period_expires_date: null,
       purchase_date: "2022-02-08T08:08:06Z",
-      expires_date: "2099-12-18T08:08:06Z",
+      expires_date: "2099-09-09T08:08:06Z",
     };
     for (const appName in UAMappings) {
       if (userAgent.startsWith(appName)) {
