@@ -29,22 +29,44 @@ if (!$response) {
     },
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
   };
+  const entitlementData = {
+    grace_period_expires_date: null,
+    purchase_date: "2022-09-08T01:04:17Z",
+    expires_date: "2099-12-18T01:04:17Z",
+  };
+
   const subscriptionData = {
-    expires_date: "2088-08-08T08:08:08Z",
-    original_purchase_date: "2023-08-08T08:08:08Z",
-    purchase_date: "2023-08-08T08:08:08Z",
+    is_sandbox: !1,
     ownership_type: "PURCHASED",
+    billing_issues_detected_at: null,
+    period_type: "normal",
+    expires_date: "2099-12-18T01:04:17Z",
+    grace_period_expires_date: null,
+    unsubscribe_detected_at: null,
+    original_purchase_date: "2022-09-08T01:04:18Z",
+    purchase_date: "2022-09-08T01:04:17Z",
     store: "app_store",
   };
+
   for (const appName in UAMappings) {
     if (new RegExp(`^${appName}`, "i").test(UA)) {
       console.log("找到匹配");
       const { name, id } = UAMappings[appName];
+      responseBody.subscriber = {
+        non_subscriptions: {},
+        first_seen: "2022-09-08T01:04:03Z",
+        original_application_version: "8",
+        other_purchases: {},
+        management_url: "https://apps.apple.com/account/subscriptions",
+        subscriptions: {},
+        entitlements: {},
+        original_purchase_date: "2022-09-07T13:05:43Z",
+        original_app_user_id: "$RCAnonymousID:ddgksf2013",
+        last_seen: "2022-09-08T01:04:03Z",
+      };
       responseBody.subscriber.subscriptions = { [id]: subscriptionData };
-      responseBody.subscriber.management_url =
-        "https://apps.apple.com/account/subscriptions";
       responseBody.subscriber.entitlements = {
-        [name]: { ...subscriptionData, product_identifier: id },
+        [name]: { ...entitlementData, product_identifier: id },
       };
       break;
     }
