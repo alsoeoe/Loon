@@ -30,7 +30,7 @@ if (!$response) {
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
   };
   const subscriptionData = {
-    expires_date: "8888-08-08T08:08:08Z",
+    expires_date: "2088-08-08T08:08:08Z",
     original_purchase_date: "2023-08-08T08:08:08Z",
     purchase_date: "2023-08-08T08:08:08Z",
     ownership_type: "PURCHASED",
@@ -41,6 +41,8 @@ if (!$response) {
       console.log("找到匹配");
       const { name, id } = UAMappings[appName];
       responseBody.subscriber.subscriptions = { [id]: subscriptionData };
+      responseBody.subscriber.management_url =
+        "https://apps.apple.com/account/subscriptions";
       responseBody.subscriber.entitlements = {
         [name]: { ...subscriptionData, product_identifier: id },
       };
