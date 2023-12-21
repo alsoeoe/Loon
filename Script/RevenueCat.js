@@ -51,7 +51,7 @@ if (!$response) {
 
   for (const appName in UAMappings) {
     if (new RegExp(`^${appName}`, "i").test(UA)) {
-      console.log(`找到匹配${appName}\n`);
+      console.log(`找到匹配：${appName}\n`);
       const { name, id } = UAMappings[appName];
       responseBody.subscriber = {
         non_subscriptions: {},
