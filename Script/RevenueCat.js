@@ -29,11 +29,6 @@ if (!$response) {
     },
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
   };
-  const entitlementData = {
-    grace_period_expires_date: null,
-    purchase_date: "2022-09-08T01:04:17Z",
-    expires_date: "2099-12-18T01:04:17Z",
-  };
 
   const subscriptionData = {
     is_sandbox: !1,
@@ -48,9 +43,15 @@ if (!$response) {
     store: "app_store",
   };
 
+  const entitlementData = {
+    grace_period_expires_date: null,
+    purchase_date: "2022-09-08T01:04:17Z",
+    expires_date: "2099-12-18T01:04:17Z",
+  };
+
   for (const appName in UAMappings) {
     if (new RegExp(`^${appName}`, "i").test(UA)) {
-      console.log("找到匹配");
+      console.log(`找到匹配${appName}\n`);
       const { name, id } = UAMappings[appName];
       responseBody.subscriber = {
         non_subscriptions: {},
