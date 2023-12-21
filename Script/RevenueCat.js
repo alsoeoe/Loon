@@ -18,6 +18,7 @@ const UAMappings = {
   },
   Spark: { name: "premium", id: "spark_5999_1y_1w0" },
 };
+const responseBody = JSON.parse($response ? $response.body : null);
 
 function processRequest(request) {
   delete request.headers["x-revenuecat-etag"];
@@ -35,7 +36,7 @@ function processResponse(response, request) {
       ownership_type: "PURCHASED",
       billing_issues_detected_at: null,
       period_type: "normal",
-      expires_date: "2099-09-09T08:08:06Z",
+      expires_date: "2099-12-18T08:08:06Z",
       grace_period_expires_date: null,
       unsubscribe_detected_at: null,
       original_purchase_date: "2022-02-08T08:08:08Z",
@@ -45,7 +46,7 @@ function processResponse(response, request) {
     const entitlementData = {
       grace_period_expires_date: null,
       purchase_date: "2022-02-08T08:08:06Z",
-      expires_date: "2099-09-09T08:08:06Z",
+      expires_date: "2099-12-18T08:08:06Z",
     };
     for (const appName in UAMappings) {
       if (userAgent.startsWith(appName)) {
@@ -53,7 +54,7 @@ function processResponse(response, request) {
         const { name, id } = UAMappings[appName];
         response.subscriber = {
           non_subscriptions: {},
-          first_seen: "2022-02-08T08:08:06Z",
+          first_seen: "2022-02-08T01:04:03Z",
           original_application_version: "8",
           other_purchases: {},
           management_url: "https://apps.apple.com/account/subscriptions",
