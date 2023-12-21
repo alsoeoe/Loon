@@ -35,18 +35,18 @@ if (!$response) {
     ownership_type: "PURCHASED",
     billing_issues_detected_at: null,
     period_type: "normal",
-    expires_date: "2099-12-18T01:04:17Z",
+    expires_date: "2099-09-09T09:09:09Z",
     grace_period_expires_date: null,
     unsubscribe_detected_at: null,
-    original_purchase_date: "2022-09-08T01:04:18Z",
-    purchase_date: "2022-09-08T01:04:17Z",
+    original_purchase_date: "2022-09-09T09:09:10Z",
+    purchase_date: "2022-09-09T09:09:09Z",
     store: "app_store",
   };
 
   const entitlementData = {
     grace_period_expires_date: null,
-    purchase_date: "2022-09-08T01:04:17Z",
-    expires_date: "2099-12-18T01:04:17Z",
+    purchase_date: "2022-09-09T09:09:09Z",
+    expires_date: "2099-09-09T09:09:09Z",
   };
 
   for (const appName in UAMappings) {
@@ -55,15 +55,15 @@ if (!$response) {
       const { name, id } = UAMappings[appName];
       responseBody.subscriber = {
         non_subscriptions: {},
-        first_seen: "2022-09-08T01:04:03Z",
+        first_seen: "2022-09-09T09:09:08Z",
         original_application_version: "8",
         other_purchases: {},
         management_url: "https://apps.apple.com/account/subscriptions",
         subscriptions: {},
         entitlements: {},
-        original_purchase_date: "2022-09-07T13:05:43Z",
-        original_app_user_id: "$RCAnonymousID:ddgksf2013",
-        last_seen: "2022-09-08T01:04:03Z",
+        original_purchase_date: "2022-09-08T08:08:08Z",
+        original_app_user_id: "$RCAnonymousID:also",
+        last_seen: "2022-09-09T01:04:03Z",
       };
       responseBody.subscriber.subscriptions = { [id]: subscriptionData };
       responseBody.subscriber.entitlements = {
