@@ -13,7 +13,7 @@ hostname = api.revenuecat.com
 
 [Script]
 
-http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/RevenueCat.js, requires-body=true, timeout=10, tag=Response
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/RevenueCat.js, requires-body=true, timeout=10, tag=RevenueCat
 http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/RevenueCat.js, requires-body=true, timeout=10, tag=Request
 
 

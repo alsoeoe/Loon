@@ -1,0 +1,18 @@
+#!name = Flomo
+#!desc= 浮墨卡片笔记-备忘、便签、日记
+#!openUrl= https://raw.githubusercontent.com/alsoeoe/Loon/main/Plugin/Flomo.plugin
+#!author=
+#!homepage=
+#!icon= https://raw.githubusercontent.com/alsoeoe/Aicon/main/Icons/Flomo.png
+#!date = 2023-12-22 17:41:10
+
+
+
+
+
+[MITM]
+
+hostname = flomoapp.com
+
+[Script]
+http-response ^https:\/\/flomoapp\.com\/api\/v1\/user\/me script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Flomo.js, requires-body=true, timeout=10, tag=Flomo
