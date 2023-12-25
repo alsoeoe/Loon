@@ -7,11 +7,19 @@
 // 定义一个函数来处理响应
 
 function handleResponse(url, responseBody) {
-  if (url === "https://flomoapp.com/api/v1/user/me") {
+  // 创建正则表达式对象
+  const regexUserMe = new RegExp(
+    "^https:\\/\\/flomoapp\\.com\\/api\\/v1\\/user\\/me"
+  );
+  const regexMemoNotify = new RegExp(
+    "^https://flomoapp.com/api/v1/memo/notify_of_today"
+  );
+
+  if (regexUserMe.test(url)) {
     // 对第一个URL执行的操作
     responseBody.data.pro_expired_at = "2088-08-08 08:08:08";
     responseBody.data.referee_pro_days = "8888";
-  } else if (url === "https://flomoapp.com/api/v1/memo/notify_of_today") {
+  } else if (regexMemoNotify.test(url)) {
     // 对第二个URL执行的操作
     responseBody.message = "";
     responseBody.code = 0;
