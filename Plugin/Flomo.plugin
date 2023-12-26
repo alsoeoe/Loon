@@ -15,5 +15,5 @@
 hostname = flomoapp.com
 
 [Script]
-http-response ^https:\/\/flomoapp\.com\/api\/v1\/user\/me script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Flomo.js, requires-body=true, timeout=10, tag=Flomo
-http-response ^https:\/\/flomoapp\.com\/api\/v1\/memo\/notify_of_today script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Flomo.js, requires-body=true, timeout=10, tag=Flomo
+http-response ^https:\/\/flomoapp\.com\/api\/v1\/user\/me script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Flomo.js, requires-body=true, timeout=10, tag=Flomo会员解锁
+http-response ^https:\/\/flomoapp\.com\/api\/v1\/memo\/notify_of_today script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Flomo.js, requires-body=true, timeout=10, tag=Flomo每日回顾关闭提示
