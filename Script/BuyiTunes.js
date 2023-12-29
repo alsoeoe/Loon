@@ -15,7 +15,7 @@ const productIDMap = {
   },
   "com.paha.CapyMood": {
     name: "CapyMood",
-    product_id: "com.paha.CapyMood",
+    product_id: "com.paha.CapyMood.year",
     mark: 0,
   },
   "com.kobaltlab.HashPhotos": {
