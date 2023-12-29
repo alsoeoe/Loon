@@ -1,0 +1,17 @@
+#!name = BuyiTunes解锁
+#!desc = 个人自用（用完关闭）
+#!author =
+#!openUrl =
+#!homepage =
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/Icons/BuyiTunes.png
+#!date = 2023-12-29 16:53:12
+
+
+
+
+[MITM]
+hostname = buy.itunes.apple.com
+
+[Script]
+
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/BuyiTunes.js, requires-body=true, timeout=60, tag=BuyiTunes解锁
