@@ -1,0 +1,8 @@
+
+[MITM]
+hostname = raw.githubusercontent.com, gist.githubusercontent.com, github.com
+
+[URL Rewrite]
+^(https?:\/\/(raw\.githubusercontent\.com|gist\.githubusercontent\.com|github\.com\/[^/]+\/[^/]+(\/releases\/download|\/archive))\/.+?)$ https://mirror.ghproxy.com/$1 302
+
+^https:\/\/github\.com\/.+?$ header-del Content-Security-Policy
