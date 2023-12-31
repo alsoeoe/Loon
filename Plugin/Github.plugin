@@ -3,7 +3,7 @@
 
 
 [Rule]
-DOMAIN,mirror.ghproxy.com,PROXY
+DOMAIN,mirror.ghproxy.com,DIRECT
 
 
 
