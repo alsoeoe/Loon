@@ -24,7 +24,7 @@ const productIDMap = {
     mark: 0,
   },
   "com.stress.test.record": {
-    name: "解压小橙子",
+    name: "fishfun",
     product_id: "com.stress.test.record.yearly",
     mark: 0,
   },
