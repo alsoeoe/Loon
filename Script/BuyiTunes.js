@@ -23,6 +23,11 @@ const productIDMap = {
     product_id: "com.kobaltlab.HashPhotos.iap.pro1year",
     mark: 0,
   },
+  "com.stress.test.record": {
+    name: "解压小橙子",
+    product_id: "com.stress.test.record.yearly",
+    mark: 0,
+  },
 };
 
 // 固定部分
