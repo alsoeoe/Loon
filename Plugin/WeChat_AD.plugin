@@ -1,0 +1,14 @@
+#!name= 微信去广告
+#!desc= 不包含公众号信息流AD、朋友圈AD
+#!openUrl= https://raw.githubusercontent.com/alsoeoe/Loon/main/Plugin/WeChat_AD.plugin
+#!author= Also
+#!homepage=
+#!icon= https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/WX.png
+#!date = 2024-01-03 16:41:12
+
+[Mitm]
+hostname = mp.weixin.qq.com
+
+[Rewrite]
+# 移除公众号中的推广内容
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? reject-dict
