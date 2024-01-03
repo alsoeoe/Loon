@@ -3,7 +3,7 @@
 #!author= MartinsKing（@ClydeTime）
 #!openUrl =
 #!homepage= https://github.com/ClydeTime/BiliBili/tree/master
-#!icon= https://raw.githubusercontent.com/alsoeoe/Aicon/main/TaskIcons/BLBL.png
+#!icon= https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/BLBL.png
 #!date = 2023-12-06 10:57:07
 
 # 现将获取cookie与定时任务合并为一个模块
