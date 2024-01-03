@@ -1,0 +1,14 @@
+#!name= 皮皮虾去广告
+#!desc= 过滤皮皮虾广告
+#!openUrl=
+#!author=
+#!homepage=
+#!icon= https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/PPX.png
+#!date = 2024-01-03 17:09:29
+
+[Mitm]
+hostname = *.pipix.com
+
+[Rewrite]
+app_name=super&([\S]*)aid=\d+ 307 app_name=super_pro&$1aid=1412
+
