@@ -29,7 +29,7 @@ if (!$response) {
     },
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
     Sex: {
-      name: "premium",
+      name: "Premium Plus",
       id: "ru.sexactions.subscriptionPromo1",
     },
   };
