@@ -28,6 +28,10 @@ if (!$response) {
       id: "com.premium.yearly",
     },
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
+    Sex: {
+      name: "premium",
+      id: "ru.sexactions.subscriptionPromo1",
+    },
   };
 
   const subscriptionData = {
