@@ -1,4 +1,10 @@
-
+#!name = V2ex签到
+#!desc = 每日签到脚本
+#!author = also
+#!openUrl =
+#!homepage = 
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/V2ex.png
+#!date = 2023-12-06 09:27:33
 
 [MITM]
 
