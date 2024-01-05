@@ -1,5 +1,5 @@
 const cookieName = "V2EX";
-const cookieKey = "chavy_cookie_v2ex";
+const cookieKey = "V2ex_Cookie";
 const cookieVal = $request.headers["Cookie"] || $request.headers["cookie"];
 
 if (cookieVal) {
