@@ -1,8 +1,7 @@
 #!name = Spotify解锁
 #!desc = 部分解锁premium
-#!author = app2smile,VirgilClyne
-#!openUrl = http://boxjs.com/#/app/DualSubs.Translate
-#!homepage = https://github.com/DualSubs
+#!author = app2smile
+#!openUrl = https://github.com/app2smile/rules
 #!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/Spotify.png
 #!date = 2024-01-08 17:08:56
 

@@ -6,11 +6,8 @@
 
 
 [MITM]
-
 hostname = auth.alipan.com
 
 [Script]
-
 http-response https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, requires-body=1, tag=阿里云盘签到cookie
-
 cron "0 9 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, tag=阿里云盘签到
