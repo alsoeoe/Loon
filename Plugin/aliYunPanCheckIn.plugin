@@ -1,10 +1,8 @@
 #!name = 阿里云盘签到
-#!desc =
 #!author = lowking
-#!openUrl =
 #!homepage = https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 #!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/ALYP.png
-#!date = 2023-12-05 17:41:47
+#!date = 2024-01-08 14:51:24
 
 
 [MITM]
