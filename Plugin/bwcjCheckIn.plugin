@@ -18,4 +18,4 @@ http-request ^https?:\/\/webapi\.qmai\.cn\/web\/catering\/integral\/sign\/signIn
 cron "0 9 * * *" script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.js, timeout=10, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png, tag=霸王茶姬小程序签到
 
 
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.js, timeout=10, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png, tag=霸王茶姬小程序签到2024
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj2024.js, timeout=10, img-url=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.png, tag=霸王茶姬小程序签到2024
