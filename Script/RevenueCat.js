@@ -32,6 +32,12 @@ if (!$response) {
       name: "Premium Plus",
       id: "ru.sexactions.subscriptionPromo1",
     },
+    cookie: {
+      name: "allaccess",
+      id: "app.ft.Bookkeeping.lifetime",
+    },
+    }
+
   };
 
   const subscriptionData = {
