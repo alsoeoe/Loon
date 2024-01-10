@@ -36,8 +36,6 @@ if (!$response) {
       name: "allaccess",
       id: "app.ft.Bookkeeping.lifetime",
     },
-    }
-
   };
 
   const subscriptionData = {
