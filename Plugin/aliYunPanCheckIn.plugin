@@ -1,13 +1,16 @@
 #!name = 阿里云盘签到
-#!author = lowking
-#!homepage = https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
 #!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/ALYP.png
-#!date = 2024-01-08 14:51:24
+#!date = 2024-01-19 14:33:18
 
 
 [MITM]
-hostname = auth.alipan.com
+hostname = auth.alipan.com, auth.aliyundrive.com
 
 [Script]
-http-response https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, requires-body=1, tag=阿里云盘签到cookie
-cron "0 9 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, tag=阿里云盘签到
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, requires-body=true, timeout=60, tag=阿里云盘获取token
+cron "0 9 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, tag=阿里云盘签到
+
+
+
+
+
