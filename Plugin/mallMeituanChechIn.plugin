@@ -1,0 +1,17 @@
+#!name = 美团买菜签到
+#!desc = 每日签到
+#!author= chavyleung
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/XXCS.png
+#!date = 2024-01-22 15:28:01
+
+方式1：美团APP -> 美团买菜 -> 我的 -> 买菜币 -> 去使用 -> 在退回上一级，QX提示成功即可
+方式2：美团APP -> 美团买菜 -> 我的 -> 买菜币 -> 左滑一半做推出手势再松手（不要真的左滑退出） -> QX提示成功即可
+
+[MITM]
+hostname = mall.meituan.com
+
+[Script]
+# 获取美团买菜任务需要的各项参数
+http-request ^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/queryTaskListInfoV.\? script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.cookie.js, timeout=60, tag=美团买菜ck
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/JoJoJotarou/myScript/master/script/meituan/mall.meituan.mallcoin.task.js, tag=美团买菜签到
+
