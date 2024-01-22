@@ -37,10 +37,9 @@ if (!$response) {
       id: "app.ft.Bookkeeping.lifetime",
     },
     MOZE: {
-        name: "MOZE_PREMIUM_SUBSCRIPTION",
-        id: "MOZE_PRO_SUBSCRIPTION_YEARLY_BASIC",
-        },
-    }
+      name: "MOZE_PREMIUM_SUBSCRIPTION",
+      id: "MOZE_PRO_SUBSCRIPTION_YEARLY_BASIC",
+    },
   };
 
   const subscriptionData = {
