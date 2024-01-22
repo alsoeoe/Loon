@@ -1,0 +1,13 @@
+#!name = 沪上阿姨签到
+#!desc = 打开小程序->我的，若提示获取Cookie成功则可以使用该脚本
+#!author= Sliverkiss
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/HSAY.png
+#!date = 2024-01-22 15:27:56
+
+[MITM]
+
+hostname =webapi.qmai.cn , qmwebapi.qmai.cn
+
+[Script]
+http-request ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info script-path=https://gist.githubusercontent.com/Sliverkiss/e427dc3164d0c008f8d282f180d7fc00/raw/hsay.js, timeout=10, tag=沪上阿姨获取ck
+cron "0 9 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/e427dc3164d0c008f8d282f180d7fc00/raw/280945016940399a593955e40ce0d4591a5292c5/hsay.js, timeout=10, tag=沪上阿姨每日签到
