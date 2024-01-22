@@ -2,7 +2,6 @@
 #!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/ALYP.png
 #!date = 2024-01-19 14:33:18
 
-
 [MITM]
 hostname = auth.alipan.com, auth.aliyundrive.com
 
