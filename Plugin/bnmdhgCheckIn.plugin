@@ -1,0 +1,14 @@
+#!name = 巴奴毛肚火锅签到
+#!desc = 每日签到
+#!author = smallfawn
+#!openUrl =
+#!homepage = https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/bnmdhg_wx.js
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/BNMDHG.png
+#!date = 2024-01-22 14:12:46
+
+[MITM]
+hostname = cloud.banu.cn
+
+[Script]
+http-request ^https:\/\/cloud\.banu\.cn\/api\/member\/statistic\?member_id=([a-zA-Z0-9]+) script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Bnmdhg_Cookie.js, requires-body=true, timeout=60, tag=巴奴火锅获取ck
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/smallfawn/QLScriptPublic/main/bnmdhg_wx.js, tag=巴奴火锅签到
