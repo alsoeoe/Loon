@@ -1,0 +1,14 @@
+#!name = 途虎养车签到
+#!desc = cookie获取:公众号搜索途虎小程序登录
+#!author= Zoo
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/THYC.png
+#!date = 2024-01-22 17:12:48
+
+
+[MITM]
+hostname = api.tuhu.cn
+
+[Script]
+http-request https://api.tuhu.cn/User/GetInternalCenterInfo script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js, timeout=60, tag=途虎养车获取ck
+
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js, timeout=60, tag=途虎养车签到
