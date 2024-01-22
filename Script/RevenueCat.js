@@ -40,6 +40,14 @@ if (!$response) {
       name: "MOZE_PREMIUM_SUBSCRIPTION",
       id: "MOZE_PRO_SUBSCRIPTION_YEARLY_BASIC",
     },
+    money_manager: {
+      name: "premium",
+      id: "com.happy.fastdiet.forever",
+    },
+    fastdiet: {
+      name: "premium",
+      id: "com.happy.fastdiet.forever",
+    },
   };
 
   const subscriptionData = {
