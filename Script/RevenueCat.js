@@ -10,43 +10,96 @@ if (!$response) {
   // 处理响应
   const UA = $request.headers["user-agent"];
   const UAMappings = {
+    // 谜底时钟
+    // https://apps.apple.com/cn/app/id1536358464
     "%E8%B0%9C%E5%BA%95%E6%97%B6%E9%92%9F": {
       name: "Entitlement.Pro",
       id: "tech.miidii.MDClock.subscription.year.v1",
     },
+
+    // 谜底黑胶
+    // https://apps.apple.com/cn/app/id1606306441
+    "%E8%B0%9C%E5%BA%95%E9%BB%91%E8%83%B6": {
+      name: "Entitlement.Pro",
+      id: "tech.miidii.MDClock.subscription.year.v1",
+    },
+
+    // stresswatch
+    // https://apps.apple.com/us/app/id6444737095
     Stress: { name: "StressWatch Pro", id: "stress_membership_yearly" },
+
+    // MoneyThings
+    // https://apps.apple.com/cn/app/id1549694221
     MoneyThings: {
       name: "Premium",
       id: "com.lishaohui.cashflow.lifetime",
     },
+
+    // 小决定
+    // https://apps.apple.com/cn/app/id1338769645
     Decision: {
       name: "com.nixwang.decision.entitlements.pro",
       id: "com.nixwang.decision.pro",
     },
+
+    // ScannerPro
+    // https://apps.apple.com/cn/app/id333710667
     ScannerPro: {
       name: "plus",
       id: "com.premium.yearly",
     },
+
+    // Spark邮箱
+    // https://apps.apple.com/cn/app/id997102246
     Spark: { name: "premium", id: "spark_5999_1y_1w0" },
+
+    // 性爱游戏
+    // https://apps.apple.com/cn/app/id1133512669
     Sex: {
       name: "Premium Plus",
       id: "ru.sexactions.subscriptionPromo1",
     },
+
+    // Cookie记账
+    // https://apps.apple.com/cn/app/id1559943673
     cookie: {
       name: "allaccess",
       id: "app.ft.Bookkeeping.lifetime",
     },
+
+    // Moze
+    // https://apps.apple.com/cn/app/id1460011387
     MOZE: {
       name: "MOZE_PREMIUM_SUBSCRIPTION",
       id: "MOZE_PRO_SUBSCRIPTION_YEARLY_BASIC",
     },
+
+    // 小熊记账
+    // https://apps.apple.com/us/app/id6448206280
     money_manager: {
       name: "premium",
       id: "com.happy.fastdiet.forever",
     },
+
+    // 小熊轻断食
+    // https://apps.apple.com/cn/app/id1624214488
     fastdiet: {
       name: "premium",
       id: "com.happy.fastdiet.forever",
+    },
+
+    // 花样文字
+    // https://apps.apple.com/cn/app/id1438854446
+    UTC: {
+      name: "Entitlement.Pro",
+      id: "tech.miidii.MDClock.subscription.year.v1",
+    },
+
+    // OffScreen
+    // https://apps.apple.com/cn/app/id1474340105
+    OffScreen: {
+      name: "Entitlement.Pro",
+      id: "tech.miidii.MDClock.subscription.year.v1",
     },
   };
 
