@@ -1,0 +1,15 @@
+#!name = 松鼠ios签到
+#!desc = 积分可以兑换苹果付费应用账号
+#!author= Sliverkiss 网站入口
+#!homepage= https://ios.songshuyouxi.com
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/SSIOS.png
+#!date = 2024-01-25 16:12:38
+
+[MITM]
+hostname = ios.songshuyouxi.com
+
+[Script]
+http-request ^https\:\/\/ios\.songshuyouxi\.com\/user script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/sxios.js, timeout=60, tag=松鼠ios获取ck
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/sxios.js, timeout=300, tag=松鼠ios签到
+
+
