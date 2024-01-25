@@ -1,0 +1,11 @@
+#!name = stlxz签到
+#!desc = 积分可以兑换3d打印模型
+#!author= Sliverkiss
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/STLZX.png
+#!date = 2024-01-25 16:12:38
+
+[MITM]
+hostname = www.stlxz.com
+[Script]
+cron "0 9 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/b1b8b87351ff3aca189c5addaa054430/raw/stlxz.js, timeout=300, tag=STLXZ签到
+http-request ^https:\/\/www.stlxz.com\/user\/balance script-path=https://gist.githubusercontent.com/Sliverkiss/b1b8b87351ff3aca189c5addaa054430/raw/stlxz.js, timeout=10, tag=STLXZ获取token
