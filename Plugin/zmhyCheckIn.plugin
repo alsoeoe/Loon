@@ -1,0 +1,12 @@
+#!name = 中免会员小程序
+#!desc = 签到三天抽盲盒，1积分=1元
+#!author= Sliverkiss
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/ZMHY.png
+#!date = 2024-01-25 16:12:38
+
+[MITM]
+hostname = cdfmbrapi.cdfg.com.cn
+
+[Script]
+http-request ^https:\/\/cdfmbrapi.cdfg.com.cn\/api\/points\/paymentList script-path=https://gist.githubusercontent.com/Sliverkiss/7f16bab92e312d1f0e520ca20d389924/raw/29b180093d17edd6ccf0a6fdce14a8d9ec7b06df/zmhy.js, timeout=10, tag=中免会员小程序获取token
+cron "0 9 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/7f16bab92e312d1f0e520ca20d389924/raw/29b180093d17edd6ccf0a6fdce14a8d9ec7b06df/zmhy.js, timeout=300, tag=中免会员小程序签到
