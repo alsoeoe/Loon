@@ -1,0 +1,13 @@
+#!name = Raycast
+#!desc = 解锁会员
+#!icon = https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/Raycast.png
+#!date = 2024-02-01 11:02:19
+
+[MITM]
+
+hostname = backend.raycast.com
+
+[Script]
+
+http-response ^https?:\/\/backend\.raycast\.com\/api\/v1\/me script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Raycast/Activate.js, requires-body=true, timeout=60, tag=Raycast
+    http-response ^https?:\/\/backend\.raycast\.com\/api\/v1\/me\/trial_status script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Raycast/Custom.js, requires-body=true, timeout=60, tag=Raycast
