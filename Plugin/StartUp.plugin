@@ -1,0 +1,18 @@
+#!name=开屏去广告
+#!desc=个人自用
+#!icon=https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/AD.png
+
+[Rewrite]
+# > douban
+^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject-200
+^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* - reject-200
+# > jump
+^https?:\/\/switch\.jumpvg\.com\/jump\/(getlaunchad|recommend\/ad_conf) - reject-200
+# > kfc
+^https?:\/\/res.kfc.com.cn\/advertisement\/ - reject-200
+# > damai
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome - reject-200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.mec\.popup\.get - reject-200
+
+[MITM]
+hostname = switch.jumpvg.com, api.douban.com, res.kfc.com.cn, acs.m.taobao.com,
