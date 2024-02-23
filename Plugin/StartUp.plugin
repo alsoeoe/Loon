@@ -3,9 +3,6 @@
 #!icon=https://raw.githubusercontent.com/alsoeoe/Aicon/main/AppIcon/AD.png
 
 [Rewrite]
-# > damai
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome - reject-200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.mec\.popup\.get - reject-200
 # > douban
 ^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject-200
 ^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* - reject-200
@@ -16,4 +13,4 @@
 
 
 [MITM]
-hostname = switch.jumpvg.com, api.douban.com, res.kfc.com.cn, acs.m.taobao.com,
+hostname = switch.jumpvg.com, api.douban.com, res.kfc.com.cn,
