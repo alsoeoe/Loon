@@ -10,4 +10,4 @@ hostname = backend.raycast.com
 [Script]
 
 http-response ^https?:\/\/backend\.raycast\.com\/api\/v1\/me script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Raycast/Activate.js, requires-body=true, timeout=60, tag=Raycast
-    http-response ^https?:\/\/backend\.raycast\.com\/api\/v1\/me\/trial_status script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Raycast/Custom.js, requires-body=true, timeout=60, tag=Raycast
+http-response ^https?:\/\/backend\.raycast\.com\/api\/v1\/me\/trial_status script-path=https://raw.githubusercontent.com/alsoeoe/Loon/main/Script/Raycast/Custom.js, requires-body=true, timeout=60, tag=Raycast

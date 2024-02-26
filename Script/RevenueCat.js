@@ -1,7 +1,9 @@
 const modifiedResponse = {};
-const responseBody = JSON.parse($response ? $response.body : null);
+const responseBody = JSON.parse(
+  (typeof $response != "undefined" && $response.body) || null
+);
 
-if (!$response) {
+if (typeof $response == "undefined") {
   // 处理请求
   delete $request.headers["x-revenuecat-etag"];
   delete $request.headers["X-RevenueCat-ETag"];
