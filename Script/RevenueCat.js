@@ -167,5 +167,5 @@ if (responseBody && responseBody.subscriber) {
   console.log("精灵和魔法师们，开始我们的表演吧！");
   modifiedResponse.headers = normalizeHeaders($request.headers);
 }
-
+console.log("精灵和魔法师们，开始我们的表演吧！");
 $done(modifiedResponse);
