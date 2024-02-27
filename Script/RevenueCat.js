@@ -5,7 +5,7 @@ const responseBody = JSON.parse(
 
 function normalizeHeaders(headers) {
   console.log(
-    `在我们开始之前，让我们看看这些神秘的请求头部：${JSON.stringify(headers)}`
+    `在我们开始之前，让我们看看这些神秘的请求头部：\n${JSON.stringify(headers)}`
   ); // 打印原始请求头
   if (headers["User-Agent"]) {
     headers["user-agent"] = headers["User-Agent"];
@@ -14,13 +14,13 @@ function normalizeHeaders(headers) {
   delete headers["x-revenuecat-etag"];
   delete headers["X-RevenueCat-ETag"];
   console.log(
-    `经过一番魔法处理，请求头现在干净多了: ${JSON.stringify(headers)}`
+    `经过一番魔法处理，请求头现在干净多了: \n${JSON.stringify(headers)}`
   ); // 打印正规化后的请求头
   return headers;
 }
 
 function modifyResponseBody(body) {
-  console.log(`看看我们拿到的宝贝是什么: ${JSON.stringify(body)}`); // 打印原始响应体
+  console.log(`看看我们拿到的宝贝是什么: \n${JSON.stringify(body)}`); // 打印原始响应体
 
   // 定义UA映射和订阅数据
   const UAMappings = {
@@ -140,10 +140,10 @@ function modifyResponseBody(body) {
 
   if (body && body.subscriber) {
     const UA = $request.headers["user-agent"] || $request.headers["User-Agent"];
-    console.log(`嗯，这个User-Agent闻起来像... ${UA}`); // 打印检测到的User-Agent
+    console.log(`嗯，这个User-Agent闻起来像... \n${UA}`); // 打印检测到的User-Agent
     Object.keys(UAMappings).forEach((appName) => {
       if (new RegExp(`^${appName}`, "i").test(UA)) {
-        console.log(`哇塞，我们钓到一只大鱼: ${appName}`); // 打印匹配到的应用
+        console.log(`哇塞，我们钓到一只大鱼: \n${appName}`); // 打印匹配到的应用
         const { name, id } = UAMappings[appName];
         body.subscriber.subscriptions[id] = subscriptionData;
         body.subscriber.entitlements[name] = {
@@ -154,7 +154,7 @@ function modifyResponseBody(body) {
     });
   }
 
-  console.log(`魔法施展后，宝贝现在变成了: ${JSON.stringify(body)}`); // 打印修改后的响应体
+  console.log(`魔法施展后，宝贝现在变成了: \n${JSON.stringify(body)}`); // 打印修改后的响应体
   return body;
 }
 
