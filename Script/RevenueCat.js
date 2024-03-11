@@ -119,7 +119,7 @@ function modifyResponseBody(body) {
     // Grow
     // https://apps.apple.com/cn/app/id1474340105
     Grow: {
-      name: "Grow.Pro",
+      name: "grow.pro",
       id: "grow_lifetime",
     },
   };
