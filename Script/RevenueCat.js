@@ -115,7 +115,6 @@ function modifyResponseBody(body) {
       name: "Entitlement.Pro",
       id: "tech.miidii.MDClock.subscription.year.v1",
     },
-  };
   
       Grow: {
       name: "grow.pro",
