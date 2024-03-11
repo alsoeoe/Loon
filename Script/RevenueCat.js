@@ -115,6 +115,13 @@ function modifyResponseBody(body) {
       name: "Entitlement.Pro",
       id: "tech.miidii.MDClock.subscription.year.v1",
     },
+
+    // Grow
+    // https://apps.apple.com/cn/app/id1474340105
+    Grow: {
+      name: "Grow.Pro",
+      id: "grow_lifetime",
+    },
   };
 
   const subscriptionData = {
