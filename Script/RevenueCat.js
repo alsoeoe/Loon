@@ -116,6 +116,12 @@ function modifyResponseBody(body) {
       id: "tech.miidii.MDClock.subscription.year.v1",
     },
   };
+  
+      Grow: {
+      name: "grow.pro",
+      id: "grow_lifetime"",
+    },
+  };
 
   const subscriptionData = {
     // 订阅数据
